@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Dragon Bone On Canvas Demo</title>
+    <script src="js/utils.js"></script>
+    <script src="js/matrix.js"></script>
+    <script src="js/dragonBones.js"></script>
+    <script src="js/dragonBonesGeneral.js"></script>
+</head>
+<body onLoad="init();">
+    <div id="canvasHolder">
+    	<center>Click Canvas To Change Animation</center>
+        <center><canvas id="canvas" style="border-style:dashed;" width="600" height="600"></canvas></center>
+    	<center><a href="https://github.com/drawapp8/DragonBonesOnCanvas"> DragonBonesOnCanvas On github</a></center>
+    </div>
+	
+	<script type='text/javascript'>
+		function init()	{
+			var textureJsonURL = "assets/robot/texture.json";
+			var skeletonJsonURL = "assets/robot/skeleton.json";
+			var textureURL = "assets/robot/texture.png";
+
+			loadDragonBoneArmature(textureJsonURL, skeletonJsonURL, textureURL, onArmatureCreated)
+		}
+		
+	</script>
+</body>
+</html>
